@@ -3,7 +3,6 @@ import '../../styles/HeaderStyle.css';
 
 const Header = () => {
 
-    const navigate = useNavigate();
 
     return (
 <>
