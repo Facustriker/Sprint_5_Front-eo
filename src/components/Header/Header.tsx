@@ -1,4 +1,5 @@
 import '../../styles/HeaderStyle.css';
+import BotonIngresar from "../ModalIngreso/BotonIngresar";
 
 const Header = () => {
 
@@ -31,7 +32,7 @@ const Header = () => {
                         alt="submit" className="imagenLupa"/></button>
                 
             </div>
-            <button className="buttonIngresar">Ingresar</button> 
+            <div><BotonIngresar/></div>
         </div>
         <div className="lineaBordo"/>
 </header>
