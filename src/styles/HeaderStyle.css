@@ -15,8 +15,8 @@
     background-color:#FFF3DC;
     color: #D55039;
     border-radius: 10px;
-    border-color: #D55039;
     border-width: 3px;
+    border: none;
   }
   
   .buttonIngresar:hover{
