@@ -7,6 +7,67 @@ body{
     min-height: 100vh;
   }
 
+ /*--------------------------MODAL DE REGISTRARSE-----------------------------*/
+
+
+  #contenedorBotonesRegistrarseIngresar{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  #fondoBotonesRegistrarseIngresar{
+    display: flex;
+    gap: 40PX;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.36);
+  }
+
+  .botonParteSuperiorFormulario{
+    font-family: inherit;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: underline;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #contenedorCamposFormulario{
+    background-color: #E9E6E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .columna{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  #contenedorBotonRegistrarse{
+    display: flex;
+    justify-content: center;
+  }
+
+  #botonRegistrarse{
+    background-color: #D55039;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.114);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
   /*--------------------------FONDO, TEXTO E IMAGEN HAMBURGUESA-----------------------------*/
 
 .fondo {
