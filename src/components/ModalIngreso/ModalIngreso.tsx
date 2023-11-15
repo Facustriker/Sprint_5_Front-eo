@@ -1,5 +1,5 @@
 import {Modal, Form } from "react-bootstrap";
-import * as Yup from 'yup';
+/*import * as Yup from 'yup';*/
 import {Formik, Field} from "formik";
 import axios from "axios";
 import BotonRegistrarse from "./BotonRegistrarse";
@@ -17,7 +17,7 @@ const postURL = 'http://localhost:8080/auth/registerUser';
 
 const ModalIngreso = ({show, onHide}: ModalIngresoProps) => {
 
-
+/*
     const validationSchema = Yup.object({
       firstname: Yup.string().required('Por favor, ingrese un nombre'),
       lastname: Yup.string().required('Por favor, ingrese un apellido'),
@@ -35,6 +35,7 @@ const ModalIngreso = ({show, onHide}: ModalIngresoProps) => {
             fechaNacimiento: Yup.string().required('Por favor, ingrese una fecha de nacimiento')
         });
     
+  */
   
     return (
 
