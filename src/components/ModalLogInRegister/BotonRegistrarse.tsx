@@ -16,7 +16,7 @@ const BotonRegistrarse = () => {
       email: "",
       direccion: "",
       departamento: "",
-      fechaNacimiento: new Date(),
+      fechaNacimiento: "",
     };
   };
 
@@ -31,6 +31,8 @@ const BotonRegistrarse = () => {
   };
 
   const handleModalClose = () => {
+    console.log(cliente);
+    console.log(modalType);
     setShowModal(false);
   };
 
@@ -46,8 +48,6 @@ const BotonRegistrarse = () => {
         <ModalIngreso
           show={showModal}
           onHide={handleModalClose}
-          modalType={modalType}
-          cliente={cliente}
         />
       )}
     </>

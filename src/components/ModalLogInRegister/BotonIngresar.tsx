@@ -25,6 +25,7 @@ const initializableNewClient = (): Client => {
 
 //Variable para tener como prop al producto
 const [cliente, setCliente] = useState<Client>(initializableNewClient);
+console.log(cliente);
 
 //Constantes para manejar el estado del modal
 const [showModal, setShowModal] = useState(false);
@@ -35,6 +36,8 @@ const handleClick = (cliente: Client, modal:ModalType) => {
     setCliente(cliente);
     setModalType(modal);
     setShowModal(true);
+    console.log(cliente);
+    console.log(modalType);
 };
 
 
