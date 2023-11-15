@@ -19,7 +19,7 @@ const initializableNewClient = (): Client => {
       email: "",
       direccion: "",
       departamento: "",
-      fechaNacimiento: new Date()
+      fechaNacimiento: "",
     };
 };
 
@@ -47,8 +47,6 @@ const handleClick = (cliente: Client, modal:ModalType) => {
       <ModalIngreso
       show={showModal}
       onHide={() => setShowModal(false)}
-      modalType={modalType}
-      cliente={cliente}
       />
 
     )}
