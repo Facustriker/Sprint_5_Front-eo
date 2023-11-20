@@ -1,12 +1,14 @@
-import RubroArticuloInsumoTable from "../components/ArticuloManufacturadoTable/ArticuloManufacturadoTable"
+import Header from "../components/Header/Header"
+import TabSubHeader from "../components/AdminPage/TabSubHeader"
+import '../styles/HomePageStyle.css'
 
-
-const Administacion = ()=> {
-    return (
-        <>
-            <RubroArticuloInsumoTable/>
-        </>
-    )
+const Administacion = () => {
+  return (
+    <>
+      <Header/>    
+      <TabSubHeader/>  
+    </>
+  )
 }
 
 export default Administacion

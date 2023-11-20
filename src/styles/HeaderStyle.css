@@ -8,10 +8,17 @@
     padding-right: 96px;
   
   }
+
+  #contenedorBotonesLogInRegisterHeader{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 15px;
+  }
   
   .buttonIngresar {
-    min-height: 50px;
-    min-width: 110px;
+    min-height: 30px;
+    min-width: 80px;
     background-color:#FFF3DC;
     color: #D55039;
     border-radius: 10px;

@@ -1,0 +1,4 @@
+#contenedorBotonLoguearse{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,30 +1,32 @@
 import { useNavigate } from 'react-router-dom';
 import '../../styles/HeaderStyle.css';
-import BotonIngresar from "../ModalIngreso/BotonIngresar";
+
+import BotonesLoginRegistro from '../Modals/ModalLogInRegister/BotonesLoginRegistro';
 
 const Header = () => {
 
-    const navigate = useNavigate();
+const navigate = useNavigate();
+
 
     return (
+
+        
 <>
 <header>
         <div className="header">
                 
                     <img src="https://raw.githubusercontent.com/Facustriker/El-buen-sabor---Grupo-Front-eo/main/Assets/logoPNG.png" 
-                    id="logoBSArriba" alt="logoBuenSabor"/>
+                    id="logoBSArriba" alt="logoBuenSabor" onClick={() => navigate('/')}/>
                 
             <div> 
                 <div id="arriba">
                     
-                        <button onClick={()=> navigate ('/HomePage')} className="buttonA"  >Productos</button>
+                        <button className="buttonA" onClick={() => navigate('/')}>Home</button> 
                     
-                    
-                        <button onClick={()=> navigate ('/administracion')} className="buttonA"  >Productos</button>
+                        <button className="buttonA" onClick={() => navigate('/products')}>Productos</button>
+                
+                        <button className="buttonA" onClick={() => navigate('/contact')}>Contactos</button>
 
-                        
-                        <button className="buttonA">Contactos</button>
-                    
                 </div>
             </div>
             <div className="barraBuscar">
@@ -34,23 +36,12 @@ const Header = () => {
                         alt="submit" className="imagenLupa"/></button>
                 
             </div>
-            <div><BotonIngresar/></div>
+            <div><BotonesLoginRegistro/></div>
         </div>
         <div className="lineaBordo"/>
 </header>
-
-    {/* 
-
-    <Navbar bg="dark" variant="dark">
-    <Navbar.Brand onClick={() => navigate('/')}>Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link onClick={() => navigate('/')}>Home</Nav.Link>
-            <Nav.Link onClick={() => navigate('/componentes')}>Componentes</Nav.Link>
-            <Nav.Link onClick={() => navigate('/administracion')}>Administracion</Nav.Link>
-        </Nav>
-    </Navbar>
     
-    */}
+   
 </>
 
     )

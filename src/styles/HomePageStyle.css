@@ -27,6 +27,7 @@ body{
   .botonParteSuperiorFormulario{
     font-family: inherit;
     background-color: white;
+    color: #000;
     border: none;
     border-radius: 10px;
     font-size: 18px;
@@ -37,10 +38,26 @@ body{
     padding-bottom: 5px;
   }
 
+  .botonParteSuperiorFormulario:hover{
+    font-family: inherit;
+    background-color: white;
+    color: #000;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
   #contenedorCamposFormulario{
     background-color: #E9E6E6;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  #contenedorCamposFormularioLogin{
+    background-color: #E9E6E6;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -52,14 +69,25 @@ body{
     padding-left: 30px;
   }
 
+  .columnaLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
   #contenedorBotonRegistrarse{
     display: flex;
     justify-content: center;
+    padding-top: 20px;
   }
 
   #botonRegistrarse{
     background-color: #D55039;
     border: none;
+    color: white;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.114);
     padding-left: 50px;
@@ -67,6 +95,8 @@ body{
     padding-top: 2px;
     padding-bottom: 2px;
   }
+
+  
 
   /*--------------------------FONDO, TEXTO E IMAGEN HAMBURGUESA-----------------------------*/
 
@@ -86,6 +116,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: auto;
 }
 
 #botonIniciotext{
@@ -106,6 +137,8 @@ body{
   display: flex;
   flex-direction: column;
   color: #FFF3DC;
+  overflow: auto;
+  min-width: 50%;
 }
 
 #botonIniciotext:hover{
