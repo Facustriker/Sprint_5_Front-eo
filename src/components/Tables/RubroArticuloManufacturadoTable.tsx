@@ -11,7 +11,7 @@ import { DeleteButton } from "../DeleteButton.tsx/DeleteButton";
 const RubroArticuloManufacturadoTable =()=>{
 
     //VARIABLE QUE CONTIENE DATOS RECIBIDOS POR LA API
-    const[RubroArticuloManufacturados, setRubroArticuloManufacturados] =useState<RubroArticuloManufacturado[]>([]);
+    const[rubroArticuloManufacturados, setRubroArticuloManufacturados] =useState<RubroArticuloManufacturado[]>([]);
 
     //VARIABLE QUE MUESTRA EL LOADER HASTA QUE SE RECIBAN DATOS DE LA API
     const [isLoading, setIsLoading] = useState(true);
@@ -23,8 +23,8 @@ const RubroArticuloManufacturadoTable =()=>{
     useEffect(()=>{
         //LLAMAMOS A LA FUNCION PARA OBTENER LOS PRODUCTOS DECLARADOS POR EL PRODUCT SERVICE
         const fetchRubroArticuloManufacturados = async()=>{
-            const RubroArticuloManufacturados = await RubroArticuloManufacturadoService.getRubroArticuloManufacturados(); 
-            setRubroArticuloManufacturados(RubroArticuloManufacturados);
+            const rubroArticuloManufacturados = await RubroArticuloManufacturadoService.getRubroArticuloManufacturados(); 
+            setRubroArticuloManufacturados(rubroArticuloManufacturados);
             setIsLoading(false);
         };
 
@@ -32,7 +32,7 @@ const RubroArticuloManufacturadoTable =()=>{
     },[refreshData]);
 
     //TEST, LOG MODIFICADO PARA QUE MUESTRE LOS DATOS MAS LEGIBLE
-    console.log(JSON.stringify(RubroArticuloManufacturados,null,2));
+    console.log(JSON.stringify(rubroArticuloManufacturados,null,2));
     //STRINGIFY ES CONVERTIR OBJETO JAVASCRIPT EN CADENA JSON
 
     //CONST PARA INICIALIZAR UN PRODUCTO POR DEFECTO Y EVITAR EL "undefined"
@@ -75,11 +75,11 @@ const RubroArticuloManufacturadoTable =()=>{
                         </tr>
                     </thead>
                     <tbody>
-                        {RubroArticuloManufacturados.map( RubroArticuloManufacturado => (
-                            <tr key={RubroArticuloManufacturado.id}>
-                                <td>{RubroArticuloManufacturado.denominacion}</td>
-                                <td><EditButton onClick={()=> handleClick("Editar rubro", RubroArticuloManufacturado, ModalType.UPDATE)}/></td>
-                                <td><DeleteButton onClick={()=> handleClick("Borrar rubro", RubroArticuloManufacturado, ModalType.DELETE)}/></td>
+                        {rubroArticuloManufacturados.map( rubroArticuloManufacturados => (
+                            <tr key={rubroArticuloManufacturados.id}>
+                                <td>{rubroArticuloManufacturados.denominacion}</td>
+                                <td><EditButton onClick={()=> handleClick("Editar rubro", rubroArticuloManufacturados, ModalType.UPDATE)}/></td>
+                                <td><DeleteButton onClick={()=> handleClick("Borrar rubro", rubroArticuloManufacturados, ModalType.DELETE)}/></td>
                             </tr>
                         )
 

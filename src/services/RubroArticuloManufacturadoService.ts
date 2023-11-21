@@ -1,31 +1,47 @@
 import { RubroArticuloManufacturado } from "../types/RubroArticuloManufacturado";
 
-const BASE_URL = 'http://localhost:8080/';
+const BASE_URL = 'http://localhost:8080';
 
 export const RubroArticuloManufacturadoService = {
 
     getRubroArticuloManufacturados: async () : Promise <RubroArticuloManufacturado[]>=> {
     
-    const response = await fetch(`${BASE_URL}/api/v1/RubroArticuloManufacturado`);
+    const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloManufacturado`, {
+        method: "GET",
+        headers: {
+            'Accept': '*/*',
+            'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
+            'Content-Type': 'application/json'
+        },
+    });
     const data = await response.json();
     return data;
     
     },
 
-    getRubroArticuloManufacturado: async (id: number): Promise<RubroArticuloManufacturado> => {
+    // getRubroArticuloManufacturado: async (id: number): Promise<RubroArticuloManufacturado> => {
 
-        const response = await fetch(`${BASE_URL}/api/v1/RubroArticuloManufacturado/${id}`);
-        const data = await response.json();
-        return data;
-    },
+    //     const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloManufacturado/${id}`, {
+    //         method: "GET",
+    //         headers: {
+    //             'Accept': '*/*',
+    //             'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
+    //             'Content-Type': 'application/json'
+    //         },
+    //     });
+    //     const data = await response.json();
+    //     return data;
+    // },
 
-    createRubroArticuloManufacturado: async (RubroArticuloManufacturado: RubroArticuloManufacturado): Promise<RubroArticuloManufacturado>=> {
-        const response = await fetch( `${BASE_URL}/api/v1/RubroArticuloManufacturado`,{
+    createRubroArticuloManufacturado: async (rubroArticuloManufacturado: RubroArticuloManufacturado): Promise<RubroArticuloManufacturado>=> {
+        const response = await fetch( `${BASE_URL}/api/v1/rubroArticuloManufacturado`,{
             method: "POST",
             headers: {
+                'Accept': '*/*',
+                'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(RubroArticuloManufacturado)
+            body: JSON.stringify(rubroArticuloManufacturado)
         });
 
         const data = await response.json();
@@ -34,9 +50,11 @@ export const RubroArticuloManufacturadoService = {
     },
 
     updateRubroArticuloManufacturado: async (id:number,RubroArticuloManufacturado:RubroArticuloManufacturado):Promise<RubroArticuloManufacturado>=>{
-        const response = await fetch( `${BASE_URL}/api/v1/RubroArticuloManufacturado/${id}`,{
+        const response = await fetch( `${BASE_URL}/api/v1/rubroArticuloManufacturado/${id}`,{
             method: "PUT",
             headers: {
+                'Accept': '*/*',
+                'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(RubroArticuloManufacturado)
@@ -48,8 +66,12 @@ export const RubroArticuloManufacturadoService = {
     },
 
     deleteRubroArticuloManufacturado: async (id:number):Promise<void>=>{
-        await fetch( `${BASE_URL}/api/v1/RubroArticuloManufacturado/${id}`,{
+        await fetch( `${BASE_URL}/api/v1/rubroArticuloManufacturado/${id}`,{
             method: "DELETE",
+            headers: {
+                'Accept': '*/*',
+                'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
+            },
       
     });
     }    

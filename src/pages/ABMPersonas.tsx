@@ -176,7 +176,7 @@ class ABMPersonas extends Component {
               <br />
               <a href="/administracion">
               <img src="https://raw.githubusercontent.com/Facustriker/El-buen-sabor---Grupo-Front-eo/main/Assets/botonVolverHistoria14.jpg" 
-            alt="btonVolver" id="imagenFlechitaADMIN" style={{cursor: 'pointer'}}/>
+            alt="btonVolver" id="imagenFlechitaADMIN" style={{cursor: 'pointer', maxHeight: '50px', margin:'20px'}}/>
             </a>
       <br/><br/>
         <table className='table'>

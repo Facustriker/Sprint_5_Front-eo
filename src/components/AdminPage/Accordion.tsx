@@ -10,7 +10,6 @@ function Acordeon() {
         <Accordion.Header>Categorias de Insumos</Accordion.Header>
         <Accordion.Body>
              <RubroArticuloInsumoTable/>
-
         </Accordion.Body>
       </Accordion.Item>
 

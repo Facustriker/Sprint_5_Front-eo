@@ -10,7 +10,7 @@ export const RubroArticuloInsumoService = {
         method: "GET",
         headers: {
             'Accept': '*/*',
-            'Authorization': `Bearer ` + localStorage.getItem('token'),
+            'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
             'Content-Type': 'application/json'
         },
     });
@@ -19,26 +19,26 @@ export const RubroArticuloInsumoService = {
     
     },
 
-    getRubroArticuloInsumo: async (id: number): Promise<RubroArticuloInsumo> => {
+    // getRubroArticuloInsumo: async (id: number): Promise<RubroArticuloInsumo> => {
 
-        const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloInsumo/${id}`,{
-            method: "GET",
-            headers: {
-                'Accept': '*/*',
-                'Authorization': `Bearer ` + localStorage.getItem('token'),
-                'Content-Type': 'application/json'
-            },
-        });
-        const data = await response.json();
-        return data;
-    },
+    //     const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloInsumo/${id}`,{
+    //         method: "GET",
+    //         headers: {
+    //             'Accept': '*/*',
+    //             'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
+    //             'Content-Type': 'application/json'
+    //         },
+    //     });
+    //     const data = await response.json();
+    //     return data;
+    // },
 
     creaateRubroArticuloInsumo: async (rubroArticuloInsumo: RubroArticuloInsumo): Promise<RubroArticuloInsumo>=> {
         const response = await fetch( `${BASE_URL}/api/v1/rubroArticuloInsumo`,{
             method: "POST",
             headers: {
                 'Accept': '*/*',
-                'Authorization': `Bearer ` + localStorage.getItem('token'),
+                'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(rubroArticuloInsumo)
@@ -54,7 +54,7 @@ export const RubroArticuloInsumoService = {
             method: "PUT",
             headers: {
                 'Accept': '*/*',
-                'Authorization': `Bearer ` + localStorage.getItem('token'),
+                'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(rubroArticuloInsumo)
@@ -70,7 +70,7 @@ export const RubroArticuloInsumoService = {
             method: "DELETE",
             headers: {
                 'Accept': '*/*',
-                'Authorization': `Bearer ` + localStorage.getItem('token'),
+                'Authorization': `Bearer ` + localStorage.getItem('tokenLogIn'),
             },
     });
     }    

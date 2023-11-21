@@ -12,9 +12,7 @@ function TabSubHeader() {
       <Tab eventKey="ProductosInsumos" title="Productos e Insumos">
         Tab content for Home
       </Tab>
-      <Tab eventKey="Roles" title="Roles">
-        Tab content for Profile
-      </Tab>
+      
       <Tab eventKey="ConfigParam" title="Configuracion de Parametros">
             <Acordeon/>
       </Tab>
