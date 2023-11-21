@@ -6,7 +6,14 @@ export const RubroArticuloInsumoService = {
 
     getRubroArticuloInsumos: async () : Promise <RubroArticuloInsumo[]>=> {
     
-    const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloInsumo`);
+    const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloInsumo`,{
+        method: "GET",
+        headers: {
+            'Accept': '*/*',
+            'Authorization': `Bearer ` + localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+        },
+    });
     const data = await response.json();
     return data;
     
@@ -14,7 +21,14 @@ export const RubroArticuloInsumoService = {
 
     getRubroArticuloInsumo: async (id: number): Promise<RubroArticuloInsumo> => {
 
-        const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloInsumo/${id}`);
+        const response = await fetch(`${BASE_URL}/api/v1/rubroArticuloInsumo/${id}`,{
+            method: "GET",
+            headers: {
+                'Accept': '*/*',
+                'Authorization': `Bearer ` + localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+            },
+        });
         const data = await response.json();
         return data;
     },
@@ -23,6 +37,8 @@ export const RubroArticuloInsumoService = {
         const response = await fetch( `${BASE_URL}/api/v1/rubroArticuloInsumo`,{
             method: "POST",
             headers: {
+                'Accept': '*/*',
+                'Authorization': `Bearer ` + localStorage.getItem('token'),
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(rubroArticuloInsumo)
@@ -37,6 +53,8 @@ export const RubroArticuloInsumoService = {
         const response = await fetch( `${BASE_URL}/api/v1/rubroArticuloInsumo/${id}`,{
             method: "PUT",
             headers: {
+                'Accept': '*/*',
+                'Authorization': `Bearer ` + localStorage.getItem('token'),
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(rubroArticuloInsumo)
@@ -50,7 +68,10 @@ export const RubroArticuloInsumoService = {
     deleteRubroArticuloInsumo: async (id:number):Promise<void>=>{
         await fetch( `${BASE_URL}/api/v1/rubroArticuloInsumo/${id}`,{
             method: "DELETE",
-      
+            headers: {
+                'Accept': '*/*',
+                'Authorization': `Bearer ` + localStorage.getItem('token'),
+            },
     });
     }    
 

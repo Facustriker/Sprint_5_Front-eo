@@ -1,3 +1,4 @@
 export default function useIsLoggedIn() {
-    return Boolean(window.localStorage.getItem('token'));
+    window.localStorage.setItem('isLoggedIn',"true");
+    return Boolean(window.localStorage.getItem('tokenLogIn'));
 }

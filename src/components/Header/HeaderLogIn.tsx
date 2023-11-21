@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import '../../styles/HeaderStyle.css';
 
+
 const HeaderLogIn = () => {
 
     const navigate = useNavigate();
@@ -8,6 +9,7 @@ const HeaderLogIn = () => {
     function onLogOut() {
 
         window.localStorage.removeItem('tokenLogIn');
+        window.localStorage.setItem('isLoggedIn', "false");
         navigate('/');
     }
 
@@ -26,10 +28,10 @@ const HeaderLogIn = () => {
                         <button className="buttonA" onClick={() => navigate('/homePageLogged')}>Home</button> 
                     
                     
-                        <button className="buttonA" onClick={() => navigate('/productos')}>Productos</button>
+                        <button className="buttonA" onClick={() => navigate('/products')}>Productos</button>
                     
                     
-                        <button className="buttonA" onClick={() => navigate('/contactos')}>Contactos</button>
+                        <button className="buttonA" onClick={() => navigate('/contact')}>Contactos</button>
 
 
                         <button className="buttonA" onClick={() => navigate('/administracion')}>Administracion</button>

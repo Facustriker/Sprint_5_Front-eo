@@ -26,10 +26,10 @@ const HeaderLogInHome = () => {
                         <button className="buttonA" onClick={() => navigate('/')}>Home</button> 
                     
                     
-                        <button className="buttonA" onClick={() => navigate('/productos')}>Productos</button>
+                        <button className="buttonA" onClick={() => navigate('/products')}>Productos</button>
                     
                     
-                        <button className="buttonA" onClick={() => navigate('/contactos')}>Contactos</button>
+                        <button className="buttonA" onClick={() => navigate('/contact')}>Contactos</button>
 
 
                         <button className="buttonA" onClick={() => navigate('/administracion')}>Administracion</button>

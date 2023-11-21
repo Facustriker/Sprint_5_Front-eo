@@ -1,11 +1,11 @@
-import Header from "../components/Header/Header"
 import TabSubHeader from "../components/AdminPage/TabSubHeader"
 import '../styles/HomePageStyle.css'
+import HeaderLogIn from "../components/Header/HeaderLogIn"
 
 const Administacion = () => {
   return (
     <>
-      <Header/>    
+      <HeaderLogIn/>    
       <TabSubHeader/>  
     </>
   )
