@@ -4,7 +4,7 @@ import { ArticuloManufacturadoService } from "../../services/ArticuloManufactura
 import { Button, Table } from "react-bootstrap";
 import Loader from "../Loader/Loader";
 import { ModalType } from "../../types/ModalType";
-import ArticuloManufacturadoModal from "../ArticuloManufacturadoModal/ArticuloManufacturadoModal";
+import ArticuloManufacturadoModal from "../Modals/ArticuloManufacturadoModal";
 import { EditButton } from "../EditButton/EditButton";
 import { DeleteButton } from "../DeleteButton.tsx/DeleteButton";
 

@@ -33,6 +33,10 @@ const HeaderLogInHome = () => {
 
 
                         <button className="buttonA" onClick={() => navigate('/administracion')}>Administracion</button>
+
+                            
+                        <button className="buttonA" onClick={() => navigate('/ABMPersonas')}>Personas</button>
+
                     
                 </div>
             </div>
